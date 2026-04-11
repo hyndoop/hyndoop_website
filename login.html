@@ -1,18 +1,26 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <title>Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 <body>
 
-<h2>Login</h2>
+<header>
+  <h1>Login Page</h1>
+</header>
 
-<input type="text" id="username" placeholder="Username"><br><br>
-<input type="password" id="password" placeholder="Password"><br><br>
+<div class="login-box">
+  <input type="text" id="username" placeholder="Username"><br><br>
+  <input type="password" id="password" placeholder="Password"><br><br>
 
-<button onclick="login()">Login</button>
+  <button onclick="login()">Login</button>
+</div>
 
 <script>
 function login() {
-  let u = document.getElementById("username").value;
-  let p = document.getElementById("password").value;
+  let u = document.getElementById("username").value.trim();
+  let p = document.getElementById("password").value.trim();
 
   if (u === "hyndoop" && p === "@james_tucker02567") {
     window.location.href = "inside1.html";
